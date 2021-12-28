@@ -1,0 +1,9 @@
+# Day 1 -  Beginner - Working with Variables in Python to Manage Data
+# Band Name Generator 
+
+print('Welcome to Band Name Generator!\n')
+
+favoriteCity=input('What is your favorite city? ')
+petName=input('What is a good name for a pet? ')
+
+print("Your band name is " + favoriteCity + " " + petName + "!")
