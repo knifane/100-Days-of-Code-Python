@@ -1,0 +1,23 @@
+# Day 2 - Data Types, Numbers, Operators, Type Conversion, f-Strings
+# PROJECT: Tip Calculator 
+
+# INSTRUCTIONS: Calculate the tip per person based on total bill, percentage tip, and how many people are splitting bill. Should look like below: 
+## Welcome to the tip calculator.
+## What was the total bill? $124.56
+## What percentage tip would you like to give? 10, 12, or 15? 12
+## How many people to split the bill? 7
+##Each person should pay: $19.93
+
+## WARNING: Even though the final amount might have more numbers after the decimal point, only give 2 decimal places.
+
+print('Welcome to the Tip Calculator.')
+total= input('What was the total bill? $')
+percent = input('What percentage tip would you like to give? 10, 12, or 15? ')
+people = input('How many people to split the bill? ')
+
+tip = int(percent)/100
+tip += 1
+
+perPerson = round(int(total) * tip / int(people), 2)
+
+print(f'Each person should pay ${perPerson}')
