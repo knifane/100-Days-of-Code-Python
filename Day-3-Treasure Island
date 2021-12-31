@@ -1,0 +1,252 @@
+# Day 3 - Control Flow and Logical Operators
+# PROJECT: Treasure Island
+
+# INSTRUCTIONS:Make your own "Choose Your Own Adventure" game. Use conditionals such as `if`, `else`, and `elif` statements to lay out the logic and the story's path in your program. 
+
+# [To write your code according to my story, you can use this flow chart from draw.io to help you.](https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload)
+
+# However, I think the fun part is writing your *own* story 😊
+
+# 🧞‍♂️ 🐊 🧙‍♂️ 🧟 🧚‍♂️ 🧝‍♂️ 🥷 🤖 👽 🙀 
+
+# That said if you'd like to continue with my example, feel free to use the text snippets below...
+
+### Text Snippets from my example
+
+# * 'You\'re at a crossroad. Where do you want to go? Type "left" or "right"'
+# * 'You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across.'
+# * "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?"
+# * "It's a room full of fire. Game Over."
+# * "You found the treasure! You Win!"
+# * "You enter a room of beasts. Game Over."
+# * "You chose a door that doesn't exist. Game Over."
+# * "You get attacked by an angry trout. Game Over."
+# * "You fell into a hole. Game Over."
+
+# Escaping Characters
+
+# If you want to use multiple sets of quotes inside a single string, you might have to "escape" some of them using the backslash `\`. You can see this in my first sentence: 'You\'re at a crossroad...'. [More on escaping characters here.](https://www.w3schools.com/python/gloss_python_escape_characters.asp)
+
+# Extensions
+
+# Have a think about how you might write your program to make a player's answers less case-sensitive. In other words, your code should work regardless of whether your user answers "left" or "Left".
+
+# [You can also add your own ASCII art](https://ascii.co.uk/art). Just remember to add three single quotes `'''` at the start and at the end of your artwork to turn it into a multi-line string. 
+
+
+print('''
+                                       .
+                             /^\     .
+                        /\   "V"
+                       /__\   I      O  o
+                      //..\\  I     .
+                      \].`[/  I
+                      /l\/j\  (]    .  O
+                     /. ~~ ,\/I          .
+                     \\L__j^\/I       o
+                      \/--v}  I     o   .
+                      |    |  I   _________
+                      |    |  I c(`       ')o
+                      |    l  I   \.     ,/      -Row
+                    _/j  L l\_!  _//^---^\\_
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                           ->Wizard<-
+
+Artist:  Rowan Crawford
+''')
+
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+print('''Welcome, young traveler. Your timing is impeccable. 
+I was in the middle of concocting something special but 
+I'm missing some ingredients, hmmm, yes, indeed. Oh, you'd 
+like to assist me? Perfect, so kind of you. ''')
+print('''Your objective is to find a handful of special 
+mushrooms that has a distinctive appearance, like an open 
+book. You should be able to spot them easily since they 
+give off a nice violet-colored glow. They are quite safe to 
+handle as long as you don't eat them raw. Oh, here's a clue
+to where they might be found: these mushrooms love moist 
+conditions. There. All that information should help you. I would 
+go and get them myself but this pot must be stirred in specific
+directions at different times so I cannot go far until this is 
+done. Good luck! 
+''')
+
+
+print('''You leave the hut and come at a crossroads. To the North, 
+you see snow-capped mountains with steep rocky sides. To the South,
+you see a wild jungle with swamps and plentiful vegetation. ''')
+user_input = input('Which direction will you go? ')
+
+direction = user_input.lower()
+
+if direction == "north":
+    print('''  
+                                /^L_      ,."\
+           /~\       __       /~    \   ./    \
+          /   _\   _/  \     /T~\|~\_\ / \_  /~|          _^
+        / \ /W  \ / V^\/X  /~         T  . \/   \    ,v-./
+ ,'`-. /~   ^     H  ,  . \/    ;   .   \      `. \-'   /
+     M      ~     | . ;  /         ,  _   :  .    ~\_,-'
+    /    ~    .    \    /   :                   '   \   ,/`
+   I o. ^    oP     '98b         -      _  9.`       `\9b.
+ 8oO888.  oO888P  d888b9bo. .8o 888o.       8bo.  o     988o.
+ 88888888888888888888888888bo.98888888bo.    98888bo. .d888P
+ 88888888888888888888888888888888888888888888888888888888888
+ 88888888888888P"   "" "   """9888P" P" "8P"   ""*9888888888
+
+ Veer Kothari + Ojosh!ro
+ ''')
+    print('''You head north and arrive at the base of the mountains. 
+  You don't see any purple-ish glow anywhere in the distance but 
+  perhaps you just need to climb up to see more. You energetically
+  start climbing up. The rock face is quite steep so, after
+  considerable effort, you are high enough to have trouble breathing.
+  ''')
+    mountain_answer = input('Would you like to go back? Y or N ')
+    lower_mountain = mountain_answer.lower()
+    if lower_mountain == "y":
+        print('''That's an excellent choice to your inevitable doom. 
+        You pivoted your foot while looking around for a lower handhold 
+        and you lost your footing. On your way down, your head thumped 
+        on a sign you didn't think would apply to you on the way up but 
+        it accurately reflected your future. Game over. ''')
+        print(''' 
+        _.--""--._
+      /  _    _  \
+    _  ( (_\  /_) )  _
+    { \._\   /\   /_./ }
+    /_"=-.}______{.-="_\
+    _  _.=("""")=._  _
+    (_'"_.-"`~~`"-._"'_)
+    {_"            "_}
+
+    ''')
+    else:
+        print('''You are not a quitter! With your newfound resolve and 
+        lack of foresight, you continue your climb, forgetting the first thing 
+        you noticed about these mountains. Soon, your chilled fingers are 
+        scrapping for purchase on icy, jagged rocks while your feet are trying 
+        to stabilize on the too-smooth surfaces. Alas, something slipped and 
+        you are sent tumbling down the heights to the unforgiving earth. Game over. 
+        ''')
+
+if direction == 'south':
+    print('''
+    Giraffe & Parrot
+
+
+  |   [  | v':    :              |        |_,;c    
+  | ]    |/; |,   |              |   [  ( __,/     
+  |    ,-'/  ;\ ,<  _',\.-._,;   |      ] |    n   
+  |   -' /   _;';    '=_'-' ,)  ,\        |   ,;   
+  |  ]  / \,'__/--,_,-- 'mm'J -"_  ]       '-,+_   
+  |    /    / "''-.,;"---''--'"" \      ]   __  "-'
+  ;' [      / :    : _c           /         /  ",_,'
+  |      [ | v|  , '/             c c    \ |        
+  \    ]   |  \ /| :        __,-,v;|]   . \|        
+    [      /"--'/  |      (7_   c@  )    )/|        
+  \     ]    ,-"'<':       '--,    (    /^ |        
+  | ]       / :   '|           \ |  )      |        
+  | |   /  |  |    ;,-;,        \ ,)(     ]|        
+  |  \^ |  |  :  |\ ,'           \ / \ [   |        
+  |  ?  /  \_ |  /|:              | , \    |        
+  |  | ('.   "--' |:,    ;        :\  ,\  [|        
+  |  ;\~)   _     \_) ',_|   ,    | ),  \_ :        
+  |   |/ [ /""-,_   '-'(    /.'   | \   |  '-_      
+  | [      |  |  "---,__"'=';=,_  |  \ /|\    '"-,__
+  |     ]  |  :    |    ""'^.\    |   | |    \      
+  |  [    ]|  |    :              | ]  \ \   /  _AsH
+  ''')
+    print(
+        '''Soon, you feel the heavy humidity on your skin and the overhead 
+        tree canopy creates spotches of light on the jungle floor. So much 
+        so that you didn't see where you were walking until you stepped on 
+        something squishy and a grey cloud of something exploded all around 
+        you. It stung your eyes and nose as you backed away from the area, 
+        coughing for fresh air. '''
+    )
+    print(
+        '''Once you think you've taken enough steps back and caught your 
+        breath, you realize you had a problem with your sight. Your eyes 
+        were still watering and, although it is much better than before, 
+        you can only make out splashes of color through the tears. Trying 
+        to remember what the wizard said, you try to recall what color the 
+        mushrooms are. '''
+    )
+    color = input('What color are the mushrooms? Purple or pink? ')
+    lower_color = color.lower()
+    if lower_color == "purple":
+        print(
+            '''Ah, you're right! You look around with your blurry eyes and 
+            spot a small purple-colored something on the forest floor. You 
+            stumble over and bend down to pick it up. Through your clearing 
+            eyes, you see a small mushroom with a wide outspread flaps that 
+            emmitted a soft purple glow. Just beyond where you are, there are 
+            a cluster of them growing at the base of a rotten tree stump. You 
+            gather as many as you can hold in your hands and walk back the way 
+            you came from. '''
+        )
+        print(
+            '''The wizard looked up when you entered the hut and looked extremely 
+            pleased and also slightly relieved at the sight of the mushrooms. '''
+        )
+        print(
+            ''' 'Ah, wonderful, you found them! So many, too. These shall be 
+            perfect for our dinner stew. Yes, this is dinner. What else did you 
+            think I would be making? Anyway, while I add these to the pot, let me 
+            tell you a crazy idea I had while you were gone. Something along the 
+            lines of turning YOU into these mushrooms, had you returned without 
+            them. But, no harm, no foul. All is well.  ' '''
+        )
+        print("Game End.")
+    else:
+        print(
+            '''You look around with your blurry eyes and you see some of that 
+            color on some branches overhead, within reach. You jump up with some 
+            uncoordinated movement, swiping at the color. Your hands connect with 
+            something fuzzy and with far too many legs to be a mushroom but your 
+            movement also knocked it down, right on your face. Unfortunately, you 
+            never find out what it is that you found because as soon as you felt 
+            a razor sharp pain of a bite on your cheek, you collapse to the floor, 
+            paralyzed. In search of an ingredient for dinner, you're about to become 
+            something's dinner instead. Game over.  '''
+        )
+
+if direction == 'west':
+    print(
+        ''' In this case, the path less traveled by isn't a path at all and you 
+        tumble off the face of the earth. Game over. '''
+    )
+
+if direction == 'east':
+    print(
+        '''You returned to the wizard's hut. He had a thoughtful look on his face as 
+        he stirred the pot. When he saw you, he looked overjoyed that you've returned 
+        so soon even without the mushrooms. '''
+    )
+    print(
+        ''' 'Ah, traveler, you're back! I was JUST asking myself how long I would 
+        have to keep stirring this pot until a stranger, whom I don't know, would 
+        ever return with those crucial mushrooms so I was kicking myself at the 
+        thought of letting you go. Here's a little secret between you and me. I can 
+        turn anything organic into something else organic and what I need are those 
+        mushrooms. Hm, yes, your mass can definitely make more than enough. Thank you 
+        for dinner!' '''
+    )
+    print(
+        ''' Before you can run, the wizard whipped out a wand from his robes and 
+        pointed it at you while shouting a spell. You're on your own from here, 
+        I can't speak mushroom. Game over. '''
+    )
+
+else:
+  print('''Most of the poor decisions in life may be mistakes we do not learn from but, 
+      the poorest of them all is indecision itself. Because you could not make a 
+      concrete move in a set direction, you stay stuck at the crossroads, a living 
+      cautionary tale for those who arrive at the same crossroads after meeting a 
+      wizard in need. Game over. ''')
