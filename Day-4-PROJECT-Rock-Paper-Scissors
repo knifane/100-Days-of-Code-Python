@@ -47,10 +47,19 @@ scissors = '''
 
 #Write your code below this line 👇
 
-user_input = input('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n')
+user_input = int(input('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n'))
+
+#debug
+if user_input >= 3 or user_input < 0:
+  print('That is an invalid value. Exiting. ')
+  quit()
+
+
 actions = [rock, paper, scissors]
 computer_choice = actions[random.randint(0,2)]
-user_choice = actions[int(user_input)]
+user_choice = actions[user_input]
+
+
 
 print(user_choice)
 print(f'Computer chose:\n, {computer_choice}')
