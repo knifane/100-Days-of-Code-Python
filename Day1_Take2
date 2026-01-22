@@ -1,0 +1,41 @@
+# Learning to print
+#print ('Hello World!')
+
+# \n = new line
+#print ("Hello World!\nThe world is mine!")
+
+# combine 2 strings with a + sign
+# below gives identical results
+#print("Hello " + "Clara")
+#print ("Hello" + " " + "Clara")
+
+# python input function - allows user interaction before closing
+#input("What is your name? ") #I added the space because the cursor goes right after the question mark
+# we can nest the functions. inner nest goes first.
+#print ("Hello " + input("What is your name? "))
+# trying to add ! at end of above sentence
+#print ("Hello " + input("What is your name? ") + "!")
+
+# hotkeys to comment out a line: ctrl+\ for windows and ctrl+/ for mac
+
+# python variables
+#name = input("What is your name? ")
+# variable "name" will store the user input
+#print (name)
+# variable can be any data, even just a string, and can be changed later in the code
+
+# exercise: count how many letters are in a name
+# use len() function
+#print (len("hello"))
+# name = input("What is your name? ")
+# print("Hello, " + name + ". Did you know your name has " + str(len(name)) + " letters in your name?")
+# ^ I ran into concatenate error, len() does not output a string so I had to use the string function to fix that.
+# instructor's simplified code: print(len(input("What is your name? ")))
+
+# variable name cannot have spaces, use _ instead. also cannot have variable name start with a number.
+
+# BAND NAME GENERATOR project: Start with "Welcome to the Band Name Generator." Next time asks "What is the name of the city you grew up in?" User input next line. Following line: "What is your pet's name?". Next line is user input. Final name starts with "Your band name is" and combines the city and pet name.
+print ("Welcome to the Band Name Generator.")
+city_name = input("What is the name of the city you grew up in? \n")
+pet_name = input ("What is your pet's name? \n")
+print ("Your band name could be " + city_name + " " + pet_name + ".")
