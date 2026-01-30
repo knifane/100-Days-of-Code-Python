@@ -1,0 +1,84 @@
+# data types = string, integer, float, boolean
+
+# use [ ] for the character index, starting at 0 and up to character range: subscripting method
+# print("hello"[0]) = h
+# its possible to use negative indeces, it starts from the right instead of left like positive indeces
+# print("hello"[-1]) = o
+
+# note: anything within "" is treated as a string, even "123"
+# print("123" + "345") = concatenation 
+
+# integer = whole numbers
+# print(123+345) = 468
+
+# float = numbers with decimal points, a "floating point number"
+
+# boolean = only has 2 possible values: True or False (first letter must be capitalized and with no "")
+
+# use type() to get the data type and use print to get the output: type checking
+# print(type("Hello")) = string 
+# print (type(True)) = bool
+
+# typecasting : changing the type of data of something
+# change_to_number = int("123")
+# print (type("123")) - sanity check
+# print(type(change_to_number))
+# but int("abc") won't work because its not a valid number
+# int()
+# float()
+# str()
+# bool()
+
+# mathematical operations in Python
+# addition : print (123 + 456) 
+# subtraction : print (7-3)
+# multipy : print (3 * 3) 
+# divide : print (6 / 3) - this will always result in a floating number = 2.0 : implict typecasting
+# alternative divide : print (6//3) - this will result in an integer = 2.0 : but be careful bc in case of a decimal, this will only output the first integer
+# exponent : print (2**2) 
+# python will follow PEMDAS generally 
+# but if all on the same line, * OR / will be treated same and priority will be given to whichever comes first from left to right
+# same goes for + OR -
+# print (3 * 3 + 3 / 3 - 3) = 7.0
+# print (3 * 3 + 3 // 3 - 3)= 7
+
+# "floor a number" = removing all the numbers after the decimal point in (BUT NOT ROUNDED)
+# to round to nearest whole number, use round() function. to round to a specific decimal point, use round (#, decimal)
+# print (round(4/3)) = 1
+# print (round(4/3,2)) = 1.33
+
+# assignment operator : allows to a value based on its previous value
+# +=
+# score = 0
+# score += 1
+# print (score) = 1
+# -=
+# *=
+# /=
+
+# f-strings : allows to print different data types, use f in front of the string and use {} inside the string
+# print ("Your score is " + str(score)) is same as
+# print (f"Your score is = {score}") = Your score is = 1
+
+# another example of f-string
+# score = 0
+# height = 1.8
+# is_winning = True
+# print (f"Your score is = {score}, Your height is {height}, Your team is winning is {is_winning}") = Your score is = 0, Your height is 1.8, Your team is winning is True
+
+# DAY 2 PROJECT: TIP CALCULATOR 
+# Output: 
+# Welcome to the tip calculator! 
+# What was the total bill? $150
+# How much percentage tip would you like to give? 10, 12, or 15? 12
+# How many people to split the bill? 5
+# Each person should pay: $19.93 
+
+print ("Welcome to the tip calculator!")
+pretip_bill = float(input("What was the total bill? $"))
+want_tip = int(input("How much percentage tip would you like to give? 10, 12, or 15? "))
+want_tip = 1 + (want_tip/100)
+total_people = int(input("How many people to split the bill? "))
+total_bill = pretip_bill * want_tip
+each_pays = round(total_bill / total_people, 2)
+print(f"Each person should pay: ${each_pays}")
